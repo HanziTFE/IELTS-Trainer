@@ -106,7 +106,6 @@ export async function POST(request: Request) {
       .upsert(
         {
           user_id: userId,
-          vocabId: vocabId,
           vocab_id: vocabId,
           status: dbStatus,
           updated_at: now.toISOString(),
