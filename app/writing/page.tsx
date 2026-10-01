@@ -1,5 +1,6 @@
 'use client';
 
+import ReactMarkdown from 'react-markdown';
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -147,12 +148,14 @@ export default function WritingPage() {
               <div className="py-20 text-center text-slate-400 space-y-3">
                 <div className="text-3xl animate-bounce">🧠</div>
                 <p className="text-sm font-semibold">Gemini AI 正根據雅思官方四大標準評分中...</p>
-                <p className="text-xs text-slate-400">（通常耗時 5 ~ 10 秒）</p>
+                <p className="text-xs text-slate-400">（通常耗時 15 ~ 20 秒）</p>
               </div>
             ) : feedback ? (
-              <div className="prose prose-slate text-sm leading-relaxed whitespace-pre-wrap bg-white text-slate-900 placeholder-slate-400">
-                {feedback}
-              </div>
+              <div className="text-sm leading-relaxed text-slate-800 space-y-3 font-sans">
+  <ReactMarkdown>
+    {feedback}
+  </ReactMarkdown>
+</div>
             ) : (
               <div className="py-20 text-center text-slate-400 bg-white text-slate-900 placeholder-slate-400">
                 <p className="text-sm bg-white text-slate-900 placeholder-slate-400">在左側貼上文章並點擊提交，</p>
